@@ -1,7 +1,6 @@
 # eloquentJS
 
-Exercises from Marijn Haverbeke's book *Eloquent JavaScript*
+Exercises from Marijn Haverbeke's book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
-- [Site](https://eloquentjavascript.net/)
 - [Exercises](https://eloquentjavascript.net/code/)
 
