@@ -1,3 +1,5 @@
+// https://eloquentjavascript.net/02_program_structure.html#i_rebKE3gdjV
+
 for (let i = 1; i < 101; i++) {
 	if (i % 3 === 0 && i % 5 === 0) {
 		console.log(i, 'FizzBuzz');
@@ -21,6 +23,18 @@ for (let i = 1; i < 101; i++) {
 			(i % 5 === 0) ? console.log(i, 'Buzz') :
 				console.log(i);
 }
+
+/// Alt 2:
+function fizz(num) {
+	return (num % 5 === 0 && num % 3 === 0) ? 'FizzBuzz' :
+		num % 3 === 0 ? 'Fizz' :
+			num % 5 === 0 ? 'Buzz' : num;
+}
+let a = 0;
+while (a < 100) {
+	console.log(fizz(a));
+	a++;
+};
 
 /// Book's solution:
 
