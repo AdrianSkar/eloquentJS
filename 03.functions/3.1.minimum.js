@@ -4,6 +4,8 @@
 // 	return a < b ? a : b;
 // }
 
+// const min = (a, b) => (a < b) ? a : b;
+
 function min(...args) {
 	let result = args.sort();
 	return result[0];

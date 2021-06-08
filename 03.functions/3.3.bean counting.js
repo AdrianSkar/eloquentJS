@@ -1,6 +1,10 @@
 // https://eloquentjavascript.net/03_functions.html#i_3rsiDgC2do
 
 function countBs(word) {
+
+	// let letter = /B/g;
+	// return word.match(letter).length;
+
 	let count = 0;
 	for (let i = 0; i < word.length; i++) {
 		if (word[i].indexOf('B') !== -1) { // or str.includes()
@@ -11,24 +15,40 @@ function countBs(word) {
 }
 console.log(countBs('BeanB'));
 
-function countBs2(word) {
-	let letter = /B/g;
-	return word.match(letter).length;
-}
-console.log(countBs2('BeranB'));
 
-function countChars(word, letter) {
+//______________________________________________________________________________
+
+
+function countChars(str, letter) {
 	let search = new RegExp(letter, 'g');
-	let result = word.match(search);
+	let result = str.match(search);
 	return result ? result.length : 0;
 }
-console.log(countChars('BeraeB', 'x'));
+console.log(countChars('BeraeB', 'e'));
 
-function reCountB(word) {
-	let search = 'B';
-	return countChars(word, search);
+function countChar(str, letter) {
+	// let search = new RegExp(letter, 'g');
+	// let result = str.match(search);
+	// return result ? result.length : 0;
+
+	// let count = 0;
+	// [...str].forEach(val => val === letter ? count++ : '');
+	// return count;
+
+	// return Array.from(str.matchAll(letter)).length;
+
+	let count = 0;
+	for (const letr of str.split('')) {
+		if (letr === letter) count++;
+	}
+	return count;
 }
-console.log(reCountB('testeBBee'));
+
+console.log(countChar('BeraeB', 'e'));
+console.log(countChar('BBS', 'B'));
+console.log(countChar("kakkerlak", "k"));
+
+//______________________________________________________________________________
 
 
 // Book's solution:
